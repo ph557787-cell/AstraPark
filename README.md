@@ -49,7 +49,23 @@ app/
 
 ## 📸 Giao diện
 
-> Ảnh giao diện ứng dụng sẽ được cập nhật.
+### Menu điều hướng
+![Navigation Drawer](screenshots/navigation_drawer.jpg)
+
+### Cài đặt
+![Cài đặt](screenshots/settings.jpg)
+
+### Màn hình chính
+![Dashboard](screenshots/dashboard.jpg)
+
+### Lịch sử đỗ xe
+![Lịch sử](screenshots/history.jpg)
+
+### Thống kê & Báo cáo
+![Thống kê](screenshots/statistics.jpg)
+
+### Quản lý xe vào/ra
+![Quản lý xe](screenshots/vehicles.jpg)
 
 ## 🚀 Cài đặt
 
