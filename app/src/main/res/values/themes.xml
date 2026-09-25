@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Theme cho app sang trọng -->
+    <style name="Theme.AstraPark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/vang_gold</item>
+        <item name="colorPrimaryVariant">@color/vang_gold_dam</item>
+        <item name="colorOnPrimary">@color/den_sang_trong</item>
+
+        <item name="colorSecondary">@color/xanh_navy</item>
+        <item name="colorSecondaryVariant">@color/xanh_navy</item>
+        <item name="colorOnSecondary">@color/trang_tinh_khiet</item>
+
+        <item name="android:statusBarColor">@color/trong_suot</item>
+        <item name="android:navigationBarColor">@color/den_sang_trong</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

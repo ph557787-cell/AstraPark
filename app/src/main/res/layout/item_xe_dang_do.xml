@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout cho 1 xe trong danh sách -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_stats"
+        android:padding="16dp">
+
+        <!-- Header: Chỗ đỗ + Biển số -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Badge chỗ đỗ -->
+            <TextView
+                android:id="@+id/txtBadgeChoDo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="1"
+                android:textColor="@color/den_sang_trong"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/bg_gradient_gold"/>
+
+            <!-- Biển số xe -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BIỂN SỐ XE"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.1"/>
+
+                <TextView
+                    android:id="@+id/txtBienSoXe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="51A-123.45"
+                    android:textColor="@color/trang_tinh_khiet"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <!-- Icon xe -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_car_luxury"
+                android:contentDescription="Car icon"
+                app:tint="@color/vang_gold"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#20D4AF37"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Thông tin chi tiết -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!-- Thời gian vào -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thoi_gian_vao"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txtThoiGianVao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14:30"
+                    android:textColor="@color/trang_tinh_khiet"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <!-- Thời gian đỗ -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thoi_gian_do_label"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txtThoiGianDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2h 30p"
+                    android:textColor="@color/vang_gold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <!-- Tiền dự kiến -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tien_du_kien"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/txtTienDuKien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="750K"
+                    android:textColor="#4CAF50"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Ghi chú (nếu có) -->
+        <TextView
+            android:id="@+id/txtGhiChu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ghi chú: Xe VIP"
+            android:textColor="@color/xam_platinum"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <!-- Nút hành động -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="2">
+
+            <!-- Nút Chi tiết -->
+            <Button
+                android:id="@+id/btnChiTiet"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="@string/xem_chi_tiet"
+                android:textColor="@color/vang_gold"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_gold"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- Nút Cho ra -->
+            <Button
+                android:id="@+id/btnChoRa"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="@string/cho_xe_ra"
+                android:textColor="@color/den_sang_trong"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_luxury"
+                android:layout_marginStart="6dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

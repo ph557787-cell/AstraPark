@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Checkbox tùy chỉnh sang trọng -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi được check -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37"/>
+            <corners android:radius="4dp"/>
+            <size android:width="20dp" android:height="20dp"/>
+        </shape>
+    </item>
+
+    <!-- Khi chưa check -->
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="#D4AF37"/>
+            <corners android:radius="4dp"/>
+            <size android:width="20dp" android:height="20dp"/>
+        </shape>
+    </item>
+</selector>

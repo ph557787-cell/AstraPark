@@ -1,0 +1,98 @@
+plugins {
+    //alias(libs.plugins.android.application)
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // ← THÊM DÒNG NÀY
+}
+
+android {
+    namespace 'com.astrapark.quanly'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.astrapark.quanly"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packaging {
+        resources {
+            excludes += [
+                    'META-INF/INDEX.LIST',
+                    'META-INF/DEPENDENCIES',
+                    'META-INF/LICENSE',
+                    'META-INF/LICENSE.txt',
+                    'META-INF/NOTICE',
+                    'META-INF/NOTICE.txt',
+                    'META-INF/io.netty.versions.properties'
+            ]
+        }
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // ========== THÊM FIREBASE ==========
+    // Firebase BoM (Bill of Materials)
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+
+    // Firebase Realtime Database
+    implementation 'com.google.firebase:firebase-database'
+
+    // Firebase Analytics (optional)
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Firebase Cloud Messaging (cho notification)
+    implementation 'com.google.firebase:firebase-messaging'
+    // ====================================
+
+    // Dependencies mặc định
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // DrawerLayout
+    implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
+
+    // ===== THÊM THƯ VIỆN BIỂU ĐỒ =====
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Material Design (cho NavigationView)
+    implementation 'com.google.android.material:material:1.9.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
+
+// Apply Google Services plugin - PHẢI Ở CUỐI FILE
+apply plugin: 'com.google.gms.google-services'

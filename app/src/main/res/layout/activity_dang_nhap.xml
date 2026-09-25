@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình đăng nhập quản lý sang trọng -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_luxury"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Logo nhỏ ở trên -->
+        <LinearLayout
+            android:id="@+id/layoutLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgLogoNho"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_logo_astrapark"
+                android:contentDescription="@string/ten_app"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ten_app"
+                android:textSize="28sp"
+                android:textColor="@color/vang_gold"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="12dp"/>
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_gradient_gold"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Form đăng nhập -->
+        <LinearLayout
+            android:id="@+id/layoutFormDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutLogo"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_luxury"
+            android:padding="28dp"
+            android:elevation="8dp">
+
+            <!-- Tiêu đề -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dang_nhap"
+                android:textSize="24sp"
+                android:textColor="@color/trang_tinh_khiet"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dành cho quản lý viên"
+                android:textSize="14sp"
+                android:textColor="@color/xam_platinum"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Ô nhập tài khoản -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TÀI KHOẢN"
+                android:textSize="12sp"
+                android:textColor="@color/vang_gold"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_input_luxury"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_person"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Icon user"/>
+
+                <EditText
+                    android:id="@+id/edtTaiKhoan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/tai_khoan"
+                    android:textColorHint="#80E5E5E5"
+                    android:textColor="@color/trang_tinh_khiet"
+                    android:textSize="16sp"
+                    android:background="@android:color/transparent"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+            <!-- Ô nhập mật khẩu -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MẬT KHẨU"
+                android:textSize="12sp"
+                android:textColor="@color/vang_gold"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_input_luxury"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_lock"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Icon lock"/>
+
+                <EditText
+                    android:id="@+id/edtMatKhau"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/mat_khau"
+                    android:textColorHint="#80E5E5E5"
+                    android:textColor="@color/trang_tinh_khiet"
+                    android:textSize="16sp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPassword"
+                    android:maxLines="1"/>
+
+                <ImageView
+                    android:id="@+id/imgHienMatKhau"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_visibility_off"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="Show password"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- Ghi nhớ & Quên mật khẩu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="28dp">
+
+                <CheckBox
+                    android:id="@+id/chkGhiNhoDangNhap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ghi_nho_dang_nhap"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="14sp"
+                    android:buttonTint="@color/vang_gold"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/txtQuenMatKhau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quen_mat_khau"
+                    android:textColor="@color/vang_gold"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- Nút đăng nhập -->
+            <Button
+                android:id="@+id/btnDangNhap"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/dang_nhap"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/den_sang_trong"
+                android:background="@drawable/btn_luxury"
+                android:letterSpacing="0.1"
+                android:elevation="4dp"/>
+
+            <!-- Text phân cách -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="20dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#40D4AF37"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOẶC"
+                    android:textColor="@color/xam_platinum"
+                    android:textSize="12sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#40D4AF37"/>
+
+            </LinearLayout>
+
+            <!-- Nút đăng nhập vân tay (tùy chọn) -->
+            <LinearLayout
+                android:id="@+id/layoutDangNhapVanTay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_fingerprint"
+                    android:contentDescription="Fingerprint"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng nhập bằng vân tay"
+                    android:textColor="@color/vang_gold"
+                    android:textSize="14sp"
+                    android:layout_marginStart="12dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Thông tin hỗ trợ ở dưới -->
+        <LinearLayout
+            android:id="@+id/layoutHoTro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutFormDangNhap"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cần hỗ trợ?"
+                android:textColor="@color/xam_platinum"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/txtLienHeHoTro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liên hệ: 1900-xxxx"
+                android:textColor="@color/vang_gold"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_luxury">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A000000"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Nút Back -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Back"
+            app:tint="@color/vang_gold"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TÌM KIẾM XE"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- Nút Reset -->
+        <ImageView
+            android:id="@+id/btnReset"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_refresh"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Reset"
+            app:tint="@color/vang_gold"/>
+
+    </RelativeLayout>
+
+    <!-- SEARCH BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_card_luxury"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/vang_gold"/>
+
+        <EditText
+            android:id="@+id/edtTimKiem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập biển số xe..."
+            android:textColorHint="#80E5E5E5"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="16sp"
+            android:background="@null"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:imeOptions="actionSearch"/>
+
+        <ImageView
+            android:id="@+id/btnClearSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/xam_platinum"
+            android:contentDescription="Clear"/>
+
+    </LinearLayout>
+
+    <!-- FILTER CHIPS -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+            <!-- Chip Trạng thái -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTrangThai"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trạng thái"
+                app:chipIcon="@drawable/ic_filter"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/vang_gold"
+                app:chipStrokeWidth="1dp"
+                app:chipIconTint="@color/vang_gold"
+                android:textColor="@color/den_sang_trong"/>
+
+            <!-- Chip Thời gian -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipThoiGian"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian"
+                app:chipIcon="@drawable/ic_calendar"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/vang_gold"
+                app:chipStrokeWidth="1dp"
+                app:chipIconTint="@color/vang_gold"
+                android:textColor="@color/den_sang_trong"/>
+
+            <!-- Chip Thanh toán -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipThanhToan"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán"
+                app:chipIcon="@drawable/ic_money"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/vang_gold"
+                app:chipStrokeWidth="1dp"
+                app:chipIconTint="@color/vang_gold"
+                android:textColor="@color/den_sang_trong"/>
+
+            <!-- Chip Sắp xếp -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSapXep"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sắp xếp"
+                app:chipIcon="@drawable/ic_sort"
+                app:chipBackgroundColor="@color/chip_background"
+                app:chipStrokeColor="@color/vang_gold"
+                app:chipStrokeWidth="1dp"
+                app:chipIconTint="@color/vang_gold"
+                android:textColor="@color/den_sang_trong"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <!-- ACTIVE FILTERS -->
+    <HorizontalScrollView
+        android:id="@+id/scrollActiveFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/layoutActiveFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- Các chip active sẽ được thêm động -->
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- KẾT QUẢ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtKetQua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tìm thấy 0 kết quả"
+            android:textColor="@color/xam_platinum"
+            android:textSize="13sp"/>
+
+        <ImageView
+            android:id="@+id/btnExport"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_export"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:tint="@color/vang_gold"
+            android:contentDescription="Export"/>
+
+    </LinearLayout>
+
+    <!-- RECYCLER VIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"/>
+
+    <!-- EMPTY STATE -->
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_search"
+            android:alpha="0.3"
+            app:tint="@color/xam_platinum"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Không tìm thấy kết quả"
+            android:textColor="@color/xam_platinum"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thử tìm kiếm với từ khóa khác"
+            android:textColor="@color/xam_platinum"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

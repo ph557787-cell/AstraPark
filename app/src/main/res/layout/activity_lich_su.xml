@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình lịch sử xe vào/ra -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_luxury">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A000000"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Nút Back -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Back"
+            app:tint="@color/vang_gold"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/lich_su_title"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- Nút Xuất báo cáo -->
+        <ImageView
+            android:id="@+id/btnXuatBaoCao"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_export"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Export"
+            app:tint="@color/vang_gold"/>
+
+    </RelativeLayout>
+
+    <!-- Tabs lọc nhanh -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTatCa"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/tat_ca"
+                android:textColor="@color/den_sang_trong"
+                android:textSize="13sp"
+                android:background="@drawable/btn_luxury"
+                android:minWidth="80dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnHomNay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/hom_nay"
+                android:textColor="@color/vang_gold"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_gold"
+                android:minWidth="80dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnBayNgay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/bay_ngay"
+                android:textColor="@color/vang_gold"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_gold"
+                android:minWidth="80dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnThangNay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/thang_nay"
+                android:textColor="@color/vang_gold"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_gold"
+                android:minWidth="80dp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnTuyChon"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/tuy_chon"
+                android:textColor="@color/vang_gold"
+                android:textSize="13sp"
+                android:background="@drawable/btn_outline_gold"
+                android:minWidth="80dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Tìm kiếm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_input_luxury"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:padding="4dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Search"
+            app:tint="@color/vang_gold"/>
+
+        <EditText
+            android:id="@+id/edtTimKiem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/tim_kiem_bien_so"
+            android:textColorHint="#80E5E5E5"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="15sp"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <!-- Thống kê tổng -->
+    <LinearLayout
+        android:id="@+id/layoutThongKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_card_stats"
+        android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:weightSum="2">
+
+        <!-- Số lượt -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtSoLuot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@color/trang_tinh_khiet"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/so_luot_xe"
+                android:textColor="@color/xam_platinum"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Doanh thu -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtTongDoanhThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.45M"
+                android:textColor="@color/vang_gold"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tong_doanh_thu"
+                android:textColor="@color/xam_platinum"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Danh sách lịch sử -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLichSu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"/>
+
+    <!-- Empty state -->
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_history"
+            android:alpha="0.3"
+            android:contentDescription="Empty"
+            app:tint="@color/xam_platinum"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/khong_co_lich_su"
+            android:textColor="@color/xam_platinum"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vui_long_chon_khoang_thoi_gian"
+            android:textColor="@color/xam_platinum"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

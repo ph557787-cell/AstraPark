@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dialog chọn khoảng thời gian tùy chọn -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_luxury"
+    android:padding="24dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn khoảng thời gian"
+        android:textColor="@color/vang_gold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Từ ngày -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tu_ngay"
+        android:textColor="@color/vang_gold"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"/>
+
+    <Button
+        android:id="@+id/btnTuNgay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="24/10/2024"
+        android:textColor="@color/trang_tinh_khiet"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_input_luxury"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Đến ngày -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/den_ngay"
+        android:textColor="@color/vang_gold"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"/>
+
+    <Button
+        android:id="@+id/btnDenNgay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="24/10/2024"
+        android:textColor="@color/trang_tinh_khiet"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_input_luxury"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"/>
+
+    <!-- Nút hành động -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHuyBo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/huy_bo"
+            android:textColor="@color/xam_platinum"
+            android:textSize="15sp"
+            android:background="@drawable/btn_outline_gold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/loc"
+            android:textColor="@color/den_sang_trong"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_luxury"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

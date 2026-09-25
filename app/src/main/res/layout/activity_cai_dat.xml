@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Màn hình cài đặt hệ thống -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_luxury">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A000000"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Nút Back -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Back"
+            app:tint="@color/vang_gold"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/cai_dat"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <!-- Thông tin tài khoản -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_stats"
+        android:padding="20dp"
+        android:layout_margin="16dp"
+        android:gravity="center">
+
+        <!-- Avatar -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_account"
+            android:background="@drawable/bg_gradient_gold"
+            android:padding="16dp"
+            android:contentDescription="Avatar"/>
+
+        <!-- Tên quản lý -->
+        <TextView
+            android:id="@+id/txtTenQuanLy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản trị viên"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Tài khoản -->
+        <TextView
+            android:id="@+id/txtTaiKhoan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="admin"
+            android:textColor="@color/xam_platinum"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- ScrollView cho danh sách menu -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- Menu 1: Cấu hình giá -->
+            <LinearLayout
+                android:id="@+id/menuCauHinhGia"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_price"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/cau_hinh_gia"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Thiết lập giá đỗ xe theo giờ/ngày/tháng"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 2: Thời gian miễn phí -->
+            <LinearLayout
+                android:id="@+id/menuThoiGianMienPhi"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_clock"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/thoi_gian_mien_phi"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Số phút miễn phí khi đỗ xe"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 3: Quản lý tài khoản -->
+            <LinearLayout
+                android:id="@+id/menuQuanLyTaiKhoan"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_account"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/quan_ly_tai_khoan"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Đổi mật khẩu, cập nhật thông tin"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 4: Kết nối Firebase (THAY THẾ MQTT) -->
+            <LinearLayout
+                android:id="@+id/menuKetNoiMQTT"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_wifi"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/ket_noi_firebase"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Đồng bộ cloud và điều khiển IoT"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 5: Thông tin bãi đỗ -->
+            <LinearLayout
+                android:id="@+id/menuThongTinBaiDo"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_parking_info"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/thong_tin_bai_do"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Tên, địa chỉ, giờ hoạt động"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 6: Sao lưu dữ liệu -->
+            <LinearLayout
+                android:id="@+id/menuSaoLuu"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_backup"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/sao_luu_du_lieu"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Backup/Restore qua Firebase Cloud"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Menu 7: Về ứng dụng -->
+            <LinearLayout
+                android:id="@+id/menuVeUngDung"
+                style="@style/MenuItemStyle">
+
+                <ImageView
+                    style="@style/MenuIconStyle"
+                    android:src="@drawable/ic_info"/>
+
+                <LinearLayout style="@style/MenuContentStyle">
+                    <TextView
+                        style="@style/MenuTitleStyle"
+                        android:text="@string/ve_ung_dung"/>
+                    <TextView
+                        style="@style/MenuDescStyle"
+                        android:text="Phiên bản, hỗ trợ, điều khoản"/>
+                </LinearLayout>
+
+                <ImageView style="@style/MenuArrowStyle"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#40D4AF37"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+            <!-- Nút đăng xuất -->
+            <LinearLayout
+                android:id="@+id/menuDangXuat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card_stats"
+                android:padding="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_logout"
+                    android:padding="12dp"
+                    android:contentDescription="Logout"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dang_xuat_label"
+                    android:textColor="#F44336"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

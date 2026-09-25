@@ -1,0 +1,210 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AstraPark</string>
+
+    <!-- Màn hình chào -->
+    <string name="chao_mung">Chào mừng đến với</string>
+    <string name="ten_app">ASTRAPARK</string>
+    <string name="slogan">Quản lý bãi đỗ xe cao cấp</string>
+    <string name="phien_ban">Phiên bản Quản lý v1.0</string>
+
+    <!-- Đăng nhập -->
+    <string name="dang_nhap">Đăng Nhập</string>
+    <string name="tai_khoan">Tài khoản quản lý</string>
+    <string name="mat_khau">Mật khẩu</string>
+    <string name="ghi_nho_dang_nhap">Ghi nhớ đăng nhập</string>
+    <string name="quen_mat_khau">Quên mật khẩu?</string>
+    <string name="dang_nhap_thanh_cong">Đăng nhập thành công!</string>
+    <string name="dang_nhap_that_bai">Tài khoản hoặc mật khẩu không đúng</string>
+
+    <!-- Chung -->
+    <string name="vui_long_cho">Vui lòng chờ...</string>
+    <string name="xac_nhan">Xác nhận</string>
+    <string name="huy_bo">Hủy bỏ</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="xin_chao">Xin chào</string>
+    <string name="tong_xe_dang_do">Tổng xe đang đỗ</string>
+    <string name="cho_trong">Chỗ trống</string>
+    <string name="doanh_thu_hom_nay">Doanh thu hôm nay</string>
+    <string name="so_do_bai_do">Sơ đồ bãi đỗ</string>
+    <string name="menu_nhanh">Menu nhanh</string>
+    <string name="xe_vao_ra">Xe vào/ra</string>
+    <string name="lich_su">Lịch sử</string>
+    <string name="thong_ke">Thống kê</string>
+    <string name="dang_xuat">Đăng xuất</string>
+    <string name="cho_so">Chỗ số</string>
+    <string name="bien_so">Biển số</string>
+    <string name="thoi_gian_do">Thời gian đỗ</string>
+    <string name="trang_thai_trong">Trống</string>
+    <string name="trang_thai_dang_do">Đang đỗ</string>
+    <string name="trang_thai_da_dat">Đã đặt</string>
+    <string name="trang_thai_bao_tri">Bảo trì</string>
+    <string name="mo_barrier">Mở Barrier</string>
+    <string name="xem_chi_tiet">Xem chi tiết</string>
+
+    <!-- Xe vào/ra -->
+    <string name="xe_vao_ra_title">Quản lý xe vào/ra</string>
+    <string name="them_xe_vao">Thêm xe vào</string>
+    <string name="danh_sach_xe_dang_do">Danh sách xe đang đỗ</string>
+    <string name="chua_co_xe">Chưa có xe nào đang đỗ</string>
+    <string name="nhap_bien_so">Nhập biển số xe</string>
+    <string name="chon_cho_do">Chọn chỗ đỗ</string>
+    <string name="ghi_chu_optional">Ghi chú (tùy chọn)</string>
+    <string name="xac_nhan_them">Xác nhận thêm</string>
+    <string name="thoi_gian_vao">Thời gian vào</string>
+    <string name="thoi_gian_do_label">Đã đỗ</string>
+    <string name="tien_du_kien">Tiền dự kiến</string>
+    <string name="cho_xe_ra">Cho xe ra</string>
+    <string name="xac_nhan_cho_ra">Xác nhận cho xe ra?</string>
+    <string name="thong_tin_thanh_toan">Thông tin thanh toán</string>
+    <string name="tong_tien">Tổng tiền</string>
+    <string name="phuong_thuc_thanh_toan">Phương thức thanh toán</string>
+    <string name="tien_mat">Tiền mặt</string>
+    <string name="chuyen_khoan">Chuyển khoản</string>
+    <string name="the">Thẻ</string>
+    <string name="da_thanh_toan">Đã thanh toán</string>
+    <string name="in_hoa_don">In hóa đơn</string>
+    <string name="loi_bien_so_trong">Vui lòng nhập biển số xe</string>
+    <string name="loi_chua_chon_cho">Vui lòng chọn chỗ đỗ</string>
+    <string name="loi_cho_da_co_xe">Chỗ này đã có xe đỗ</string>
+    <string name="them_xe_thanh_cong">Đã thêm xe vào chỗ</string>
+    <string name="cho_xe_ra_thanh_cong">Xe đã ra. Thu</string>
+
+    <!-- Lịch sử -->
+    <string name="lich_su_title">Lịch sử xe vào/ra</string>
+    <string name="tim_kiem_bien_so">Tìm kiếm theo biển số...</string>
+    <string name="tat_ca">Tất cả</string>
+    <string name="hom_nay">Hôm nay</string>
+    <string name="bay_ngay">7 ngày</string>
+    <string name="thang_nay">Tháng này</string>
+    <string name="tuy_chon">Tùy chọn</string>
+    <string name="chon_ngay">Chọn ngày</string>
+    <string name="tu_ngay">Từ ngày</string>
+    <string name="den_ngay">Đến ngày</string>
+    <string name="loc">Lọc</string>
+    <string name="tong_ket">Tổng kết</string>
+    <string name="so_luot_xe">Số lượt xe</string>
+    <string name="tong_doanh_thu">Tổng doanh thu</string>
+    <string name="xuat_bao_cao">Xuất báo cáo</string>
+    <string name="da_thanh_toan_label">Đã thanh toán</string>
+    <string name="chua_thanh_toan">Chưa thanh toán</string>
+    <string name="dang_do_label">Đang đỗ</string>
+    <string name="da_ra">Đã ra</string>
+    <string name="khong_co_lich_su">Không có lịch sử nào</string>
+    <string name="vui_long_chon_khoang_thoi_gian">Vui lòng chọn khoảng thời gian khác</string>
+    <string name="luot">lượt</string>
+
+    <!-- Thống kê -->
+    <string name="thong_ke_title">Thống kê &amp; Báo cáo</string>
+    <string name="bieu_do_doanh_thu">Biểu đồ doanh thu</string>
+    <string name="bieu_do_luot_xe">Biểu đồ lượt xe</string>
+    <string name="phuong_thuc_thanh_toan_title">Phương thức thanh toán</string>
+    <string name="bao_cao_tong_hop">Báo cáo tổng hợp</string>
+    <string name="ngay">Ngày</string>
+    <string name="tuan">Tuần</string>
+    <string name="thang">Tháng</string>
+    <string name="nam">Năm</string>
+    <string name="tong_doanh_thu_label">Tổng doanh thu</string>
+    <string name="tong_luot_xe">Tổng lượt xe</string>
+    <string name="trung_binh_ngay">Trung bình/ngày</string>
+    <string name="gio_cao_diem">Giờ cao điểm</string>
+    <string name="so_sanh_ky_truoc">So với kỳ trước</string>
+    <string name="tang">Tăng</string>
+    <string name="giam">Giảm</string>
+    <string name="khong_doi">Không đổi</string>
+    <string name="xuat_pdf">Xuất PDF</string>
+    <string name="xuat_excel">Xuất Excel</string>
+    <string name="khong_co_du_lieu">Không có dữ liệu</string>
+    <string name="vui_long_chon_khoang_thoi_gian_khac">Vui lòng chọn khoảng thời gian khác</string>
+
+    <!-- Cài đặt -->
+    <string name="cai_dat">Cài đặt</string>
+    <string name="cau_hinh_gia">Cấu hình giá</string>
+    <string name="thoi_gian_mien_phi">Thời gian miễn phí</string>
+    <string name="quan_ly_tai_khoan">Quản lý tài khoản</string>
+    <string name="ket_noi_firebase">🔥 Kết nối Firebase</string>
+    <string name="thong_tin_bai_do">Thông tin bãi đỗ</string>
+    <string name="sao_luu_du_lieu">Sao lưu dữ liệu</string>
+    <string name="ve_ung_dung">Về ứng dụng</string>
+    <string name="dang_xuat_label">Đăng xuất</string>
+
+    <!-- Cấu hình giá -->
+    <string name="gia_oto_gio">Giá ô tô/giờ</string>
+    <string name="gia_oto_ngay">Giá ô tô/ngày</string>
+    <string name="gia_oto_thang">Giá ô tô/tháng</string>
+    <string name="nhap_gia">Nhập giá (VNĐ)</string>
+    <string name="luu_cau_hinh">Lưu cấu hình</string>
+    <string name="cap_nhat_thanh_cong">Cập nhật thành công!</string>
+    <string name="cap_nhat_that_bai">Cập nhật thất bại!</string>
+
+    <!-- Thời gian miễn phí -->
+    <string name="so_phut_mien_phi">Số phút miễn phí</string>
+    <string name="phut">phút</string>
+    <string name="nhap_so_phut">Nhập số phút</string>
+
+    <!-- Tài khoản -->
+    <string name="doi_mat_khau">Đổi mật khẩu</string>
+    <string name="mat_khau_cu">Mật khẩu cũ</string>
+    <string name="mat_khau_moi">Mật khẩu mới</string>
+    <string name="nhap_lai_mat_khau_moi">Nhập lại mật khẩu mới</string>
+    <string name="cap_nhat_thong_tin">Cập nhật thông tin</string>
+    <string name="ho_ten">Họ tên</string>
+    <string name="so_dien_thoai">Số điện thoại</string>
+    <string name="email">Email</string>
+    <string name="doi_mat_khau_thanh_cong">Đổi mật khẩu thành công!</string>
+    <string name="mat_khau_cu_khong_dung">Mật khẩu cũ không đúng!</string>
+    <string name="mat_khau_khong_khop">Mật khẩu mới không khớp!</string>
+
+    <!-- FIREBASE (Thay thế MQTT) -->
+    <string name="firebase_database">Firebase Realtime Database</string>
+    <string name="firebase_region">Region</string>
+    <string name="firebase_asia_southeast">asia-southeast1 (Singapore)</string>
+    <string name="database_url">Database URL</string>
+    <string name="firebase_path_barrier">Path barrier</string>
+    <string name="firebase_path_cho_do">Path chỗ đỗ</string>
+    <string name="firebase_path_status">Path status</string>
+    <string name="kiem_tra_ket_noi">Kiểm tra kết nối</string>
+    <string name="ket_noi_thanh_cong">Kết nối Firebase thành công!</string>
+    <string name="ket_noi_that_bai">Kết nối Firebase thất bại!</string>
+    <string name="dong_bo_du_lieu">Đồng bộ dữ liệu</string>
+    <string name="dong_bo_thanh_cong">Đồng bộ thành công!</string>
+    <string name="dong_bo_that_bai">Đồng bộ thất bại!</string>
+    <string name="realtime_sync">Real-time sync</string>
+    <string name="auto_backup">Auto backup</string>
+    <string name="cloud_storage">Cloud storage</string>
+    <string name="security_rules">Security rules</string>
+    <string name="test_mode">Test mode (30 ngày)</string>
+    <string name="production_mode">Production mode</string>
+
+    <!-- Thông tin bãi đỗ -->
+    <string name="ten_bai_do">Tên bãi đỗ</string>
+    <string name="dia_chi">Địa chỉ</string>
+    <string name="lien_he">Liên hệ</string>
+    <string name="gio_mo_cua">Giờ mở cửa</string>
+    <string name="gio_dong_cua">Giờ đóng cửa</string>
+    <string name="tong_so_cho">Tổng số chỗ</string>
+
+    <!-- Sao lưu -->
+    <string name="sao_luu">Sao lưu</string>
+    <string name="khoi_phuc">Khôi phục</string>
+    <string name="sao_luu_thanh_cong">Sao lưu lên Firebase thành công!</string>
+    <string name="khoi_phuc_thanh_cong">Khôi phục từ Firebase thành công!</string>
+    <string name="xoa_du_lieu">Xóa dữ liệu</string>
+    <string name="xac_nhan_xoa_du_lieu">Bạn có chắc muốn xóa toàn bộ dữ liệu?</string>
+    <string name="khong_the_phuc_hoi">Hành động này không thể phục hồi!</string>
+    <string name="sao_luu_local">Sao lưu local</string>
+    <string name="sao_luu_cloud">Sao lưu lên Firebase Cloud</string>
+    <string name="khoi_phuc_local">Khôi phục từ local</string>
+    <string name="khoi_phuc_cloud">Khôi phục từ Firebase Cloud</string>
+
+    <!-- Về ứng dụng -->
+    <string name="phien_ban_app">Phiên bản</string>
+    <string name="phien_ban_so">1.0.0</string>
+    <string name="nha_phat_trien">Nhà phát triển</string>
+    <string name="lien_he_ho_tro">Liên hệ hỗ trợ</string>
+    <string name="dieu_khoan_su_dung">Điều khoản sử dụng</string>
+    <string name="chinh_sach_bao_mat">Chính sách bảo mật</string>
+    <string name="powered_by_firebase">Powered by Firebase</string>
+    <string name="copyright">© 2025 AstraPark. All rights reserved.</string>
+</resources>

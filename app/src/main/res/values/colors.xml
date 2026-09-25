@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Màu chính - Sang trọng -->
+    <color name="vang_gold">#D4AF37</color>
+    <color name="vang_gold_dam">#B8941E</color>
+    <color name="den_sang_trong">#1A1A1A</color>
+    <color name="trang_tinh_khiet">#FFFFFF</color>
+    <color name="xanh_navy">#0A2463</color>
+    <color name="xam_platinum">#E5E5E5</color>
+    <color name="xam_nhat">#F5F5F5</color>
+
+    <!-- Màu hỗ trợ -->
+    <color name="do_canh_bao">#C41E3A</color>
+    <color name="xanh_thanh_cong">#2D5016</color>
+    <color name="vang_canh_bao">#FFB700</color>
+
+    <!-- Màu trong suốt -->
+    <color name="trong_suot">#00000000</color>
+    <color name="den_mo">#80000000</color>
+
+    <!-- Chip colors -->
+    <color name="chip_background">#20FFFFFF</color>
+    <color name="chip_selected_background">#D4AF37</color>
+</resources>

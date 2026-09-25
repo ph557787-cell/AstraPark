@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_card_luxury"
+    android:minWidth="320dp">
+
+    <!-- Icon -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="🚗"
+        android:textSize="64sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xe vào bãi"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/vang_gold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Slot Number -->
+    <TextView
+        android:id="@+id/tvSlotNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỗ số 1"
+        android:textSize="18sp"
+        android:textColor="#BDBDBD"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Input Biển Số Label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biển số xe:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/trang_tinh_khiet"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- ✅ EditText - ĐÃ FIX WIDTH -->
+    <EditText
+        android:id="@+id/edtBienSo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="VD: 29A-12345"
+        android:inputType="textCapCharacters"
+        android:maxLength="15"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:textColorHint="#9E9E9E"
+        android:gravity="center"
+        android:background="@drawable/edittext_border"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="2dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="HỦY"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#757575"
+            android:background="@drawable/button_outline"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="XÁC NHẬN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_primary"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

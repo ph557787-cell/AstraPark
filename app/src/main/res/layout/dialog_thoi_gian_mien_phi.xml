@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dialog cấu hình thời gian miễn phí -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_luxury"
+    android:padding="24dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/thoi_gian_mien_phi"
+        android:textColor="@color/vang_gold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Mô tả -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số phút miễn phí khi xe vào bãi"
+        android:textColor="@color/xam_platinum"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Số phút -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/so_phut_mien_phi"
+        android:textColor="@color/vang_gold"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp">
+
+        <EditText
+            android:id="@+id/edtSoPhut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/nhap_so_phut"
+            android:textColorHint="#80E5E5E5"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/bg_input_luxury"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phut"
+            android:textColor="@color/trang_tinh_khiet"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Gợi ý -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💡 Gợi ý: 15 phút (phổ biến), 30 phút, 60 phút"
+        android:textColor="@color/xam_platinum"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Nút hành động -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHuyBo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/huy_bo"
+            android:textColor="@color/xam_platinum"
+            android:textSize="15sp"
+            android:background="@drawable/btn_outline_gold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnLuu"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/luu_cau_hinh"
+            android:textColor="@color/den_sang_trong"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_luxury"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

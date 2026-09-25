@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dialog thêm xe vào bãi -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_luxury"
+    android:padding="24dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/them_xe_vao"
+        android:textColor="@color/vang_gold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Nhập biển số -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIỂN SỐ XE"
+        android:textColor="@color/vang_gold"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"/>
+
+    <EditText
+        android:id="@+id/edtBienSoXe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nhap_bien_so"
+        android:textColorHint="#80E5E5E5"
+        android:textColor="@color/trang_tinh_khiet"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_input_luxury"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"/>
+
+    <!-- Chọn chỗ đỗ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHỖ ĐỖ"
+        android:textColor="@color/vang_gold"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"/>
+
+    <Spinner
+        android:id="@+id/spinnerChoDo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_input_luxury"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:popupBackground="@color/den_sang_trong"/>
+
+    <!-- Ghi chú -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ghi_chu_optional"
+        android:textColor="@color/xam_platinum"
+        android:textSize="12sp"
+        android:letterSpacing="0.1"/>
+
+    <EditText
+        android:id="@+id/edtGhiChu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="VD: Xe VIP, khách quen..."
+        android:textColorHint="#60E5E5E5"
+        android:textColor="@color/trang_tinh_khiet"
+        android:textSize="14sp"
+        android:background="@drawable/bg_input_luxury"
+        android:inputType="text"
+        android:maxLines="2"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"/>
+
+    <!-- Nút hành động -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHuyBo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/huy_bo"
+            android:textColor="@color/xam_platinum"
+            android:textSize="15sp"
+            android:background="@drawable/btn_outline_gold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/xac_nhan_them"
+            android:textColor="@color/den_sang_trong"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_luxury"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
